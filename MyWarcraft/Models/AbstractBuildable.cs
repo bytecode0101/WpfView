@@ -2,6 +2,7 @@
 using MyWarcraft.Models.Builders;
 using MyWarcraft.Models.Capabilities;
 using MyWarcraft.Models.Events;
+using MyWarcraft.Models.Units;
 using NLog;
 using System.Collections.ObjectModel;
 
@@ -13,8 +14,9 @@ namespace MyWarcraft.Models
 
         public ObservableCollection<AbstractBuildingCapability> BuildingsCapabilities { get; set; }
         public ObservableCollection<AbstractBuildingCapability> UnitsCapabilities { get; set; }
-
+        public Point Position { get; set; }
         public string Name { get; set; }
+        public int Life { get; set; }
 
         public int PercentageBuilt
         {
@@ -58,6 +60,11 @@ namespace MyWarcraft.Models
         } 
         #endregion
 
+        public virtual void TakeHit(AbstractUnit attacker, int power)
+        {
+            State = State.UNDER_ATTACK;
+            Life -= power;
+        }
 
         public virtual void Ready(int percentage)
         {

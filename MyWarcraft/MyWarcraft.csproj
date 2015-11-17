@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Attack.cs" />
     <Compile Include="Models\AbstractBuildable.cs" />
     <Compile Include="Models\Builders\DoubleTimeBuilder.cs" />
     <Compile Include="Models\Buildings\AbstractBuilding.cs" />
@@ -79,6 +80,9 @@
     <Compile Include="Models\Capabilities\BuildBowWorkshopCapability.cs" />
     <Compile Include="Models\Events\ComponentSelected.cs" />
     <Compile Include="Models\Events\BuildingStarted.cs" />
+    <Compile Include="Models\IOrder.cs" />
+    <Compile Include="Models\Move.cs" />
+    <Compile Include="Models\Point.cs" />
     <Compile Include="Models\Units\AbstractUnit.cs" />
     <Compile Include="Models\Buildings\Barrack.cs" />
     <Compile Include="Models\BaseUnit.cs" />
