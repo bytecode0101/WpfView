@@ -48,7 +48,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAAAABEAAAAAAAQAAAgIAgAEAQgkBAEAAAA=</HashCode>
+      <HashCode>AABACAAAAAAAABEAAAAAAAQAAAgIAgAEAQgkDAEAAAg=</HashCode>
       <FileName>Models\AbstractBuildable.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -107,7 +107,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MyWarcraft.Models.Capabilities.BuildBowWorkshopCapability">
-    <Position X="17.5" Y="7" Width="2.25" />
+    <Position X="17" Y="7" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Models\Capabilities\BuildBowWorkshopCapability.cs</FileName>
@@ -125,6 +125,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Units\Archer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyWarcraft.BuildingHealingCapability">
+    <Position X="24.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>HealingCapability.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="MyWarcraft.Models.IBuildable">

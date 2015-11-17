@@ -13,6 +13,7 @@ namespace MyWarcraft.Models.Units
             BuildingsCapabilities.Add(new BuildBarrackCapability());
             Name = "Peasant";
             State = State.UNDER_CONSTRUCTION;
+            Health = Health.HEALTHY;
             builder = new SimpleBuilder();
         }
     }

@@ -42,14 +42,29 @@ namespace MyWarcraft.Models
                 state = value;
                 OnPropertyChanged("State");
             }
-        }
 
+        }
+        public Health Health
+        {
+            get
+            {
+                return health;
+            }
+
+            set
+            {
+                health = value;
+                OnPropertyChanged("Health");
+            }
+
+        }
         protected AbstractBuilder builder;
 
         protected Logger Log;
 
         private int percentageBuilt;
         private State state;
+        private Health health;
 
         #region Constructor
         public AbstractBuildable()
@@ -65,6 +80,11 @@ namespace MyWarcraft.Models
             {
                 OnBuildComplete();
             }
+
+            if (percentage != 100)
+            {
+                OnDamaged();
+            }
         }
 
         protected void OnBuildComplete()
@@ -77,7 +97,17 @@ namespace MyWarcraft.Models
                 BuildingComplete.Invoke(this, arg);
             }
         }
-
+        protected void OnDamaged()
+        {
+            Health = Health.DAMAGED;
+                ;
+            if (BuildingComplete != null)
+            {
+                var arg = new BuildingCompleteEventArgs();
+                arg.Component = this;
+                BuildingComplete.Invoke(this, arg);
+            }
+        }
         public virtual void StartBuilding()
         {
             builder.PercentageBuilt += Builder_PercentageBuilt;

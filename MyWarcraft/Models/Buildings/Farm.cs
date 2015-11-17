@@ -13,6 +13,7 @@ namespace MyWarcraft.Models.Buildings
             UnitsCapabilities.Add(new BuildPeasantCapability());
             Name = "FARM";
             State = State.UNDER_CONSTRUCTION;
+            Health = Health.HEALTHY;
             builder = new SimpleBuilder();
         }
     }
