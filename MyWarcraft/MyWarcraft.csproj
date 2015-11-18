@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Movers\AbstractMovement.cs" />
     <Compile Include="Models\AbstractBuildable.cs" />
     <Compile Include="Models\Builders\DoubleTimeBuilder.cs" />
     <Compile Include="Models\Buildings\AbstractBuilding.cs" />
@@ -79,6 +80,9 @@
     <Compile Include="Models\Capabilities\BuildBowWorkshopCapability.cs" />
     <Compile Include="Models\Events\ComponentSelected.cs" />
     <Compile Include="Models\Events\BuildingStarted.cs" />
+    <Compile Include="Models\Events\PositionChanged.cs" />
+    <Compile Include="Models\Events\SecondsElapsed.cs" />
+    <Compile Include="Models\Position.cs" />
     <Compile Include="Models\Units\AbstractUnit.cs" />
     <Compile Include="Models\Buildings\Barrack.cs" />
     <Compile Include="Models\BaseUnit.cs" />
@@ -97,11 +101,11 @@
     <Compile Include="Models\PlayerBase.cs" />
     <Compile Include="Models\Builders\SimpleBuilder.cs" />
     <Compile Include="Models\State.cs" />
+    <Compile Include="Models\Movers\UnitMove.cs" />
     <Compile Include="ViewModels\BoardViewModel.cs" />
     <Compile Include="ViewModels\BuildingCapabilityViewModel.cs" />
     <Compile Include="ViewModels\ComponentViewModel.cs" />
     <Compile Include="ViewModels\PlayerBaseViewModel.cs" />
-    <Compile Include="Models\Position.cs" />
     <Compile Include="Views\BoardView.xaml.cs">
       <DependentUpon>BoardView.xaml</DependentUpon>
     </Compile>
