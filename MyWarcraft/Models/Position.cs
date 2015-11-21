@@ -1,6 +1,6 @@
 ﻿using Microsoft.Practices.Prism.Mvvm;
 
-namespace MyWarcraft.ViewModels
+namespace MyWarcraft.Models
 {
     public class Position: BindableBase
     {

@@ -5,7 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyWarcraft.Views"
              mc:Ignorable="d" 
-              Width="120" Height="60" Background="#FFF7C416">
+              Width="80" Height="80">
+    <UserControl.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="#CC65E21E" Offset="0.005"/>
+            <GradientStop Color="#006C6C49" Offset="1"/>
+        </RadialGradientBrush>
+    </UserControl.Background>
     <Grid>
         <Grid.InputBindings>
             <MouseBinding MouseAction="LeftClick" Command="{Binding DataContext.Click,

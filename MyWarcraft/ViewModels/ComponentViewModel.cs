@@ -4,6 +4,7 @@ using MyWarcraft.Models;
 using MyWarcraft.Models.Events;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using System;
 
 namespace MyWarcraft.ViewModels
 {
@@ -12,7 +13,6 @@ namespace MyWarcraft.ViewModels
         public ICommand Click { get; protected set; }
         public event ComponentSelected ComponentSelected;
         public int Life { get; set; }
-        public Position Position { get; set; }
 
         public AbstractBuildable Component { get; set; }
 
@@ -40,10 +40,15 @@ namespace MyWarcraft.ViewModels
                     UnitsCapabilitiesVMs.Add(capabilityVM);
                 }
             }
-            Click = new DelegateCommand<ComponentViewModel>(OnComponentSelected);
+            Click = new DelegateCommand(OnComponentSelected);
         }
 
-        private void OnComponentSelected(ComponentViewModel component)
+        internal void Move(int x, int y)
+        {
+            Component.Move(x,y);
+        }
+
+        private void OnComponentSelected()
         {
             if (ComponentSelected!=null)
             {

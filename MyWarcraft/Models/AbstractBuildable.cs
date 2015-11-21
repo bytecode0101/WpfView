@@ -4,6 +4,7 @@ using MyWarcraft.Models.Capabilities;
 using MyWarcraft.Models.Events;
 using NLog;
 using System.Collections.ObjectModel;
+using System;
 
 namespace MyWarcraft.Models
 {
@@ -44,10 +45,25 @@ namespace MyWarcraft.Models
             }
         }
 
+        public Position Position
+        {
+            get
+            {
+                return position;
+            }
+
+            set
+            {
+                position = value;
+                OnPropertyChanged("Position");
+            }
+        }
+
         protected AbstractBuilder builder;
 
         protected Logger Log;
 
+        private Position position;
         private int percentageBuilt;
         private State state;
 
@@ -55,7 +71,8 @@ namespace MyWarcraft.Models
         public AbstractBuildable()
         {
             Log = LogManager.GetLogger(GetType().FullName);
-        } 
+            Position = new Position();
+        }
         #endregion
 
 
@@ -65,6 +82,12 @@ namespace MyWarcraft.Models
             {
                 OnBuildComplete();
             }
+        }
+
+        internal void Move(int x, int y)
+        {
+            Position.X = x;
+            Position.Y = y;
         }
 
         protected void OnBuildComplete()

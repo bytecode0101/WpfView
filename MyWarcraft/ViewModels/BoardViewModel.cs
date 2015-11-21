@@ -2,11 +2,15 @@
 using System.Collections.ObjectModel;
 using MyWarcraft.Models;
 using MyWarcraft.Models.Events;
+using Microsoft.Practices.Prism.Commands;
+using System.Windows.Input;
+using System.Windows;
 
 namespace MyWarcraft.ViewModels
 {
     public class BoardViewModel : BindableBase
     {
+        public ICommand Click { get; protected set; }
         private ObservableCollection<AbstractBuildable> components { get; set; }
         public ObservableCollection<ComponentViewModel> ComponentVMs { get; set; }
         private ComponentViewModel selectedComponent;
@@ -34,6 +38,16 @@ namespace MyWarcraft.ViewModels
                 var componentVM = new ComponentViewModel(component);
                 componentVM.ComponentSelected += ComponentVM_ComponentSelected;
                 ComponentVMs.Add(componentVM);
+            }
+            Click = new DelegateCommand<IInputElement>(OnBoadLeftClick);
+        }
+
+        private void OnBoadLeftClick(IInputElement parameter)
+        {
+            if (SelectedComponent!=null)
+            {
+                var point = Mouse.GetPosition(parameter); 
+                SelectedComponent.Move((int)point.X, (int)point.Y);
             }
         }
 
