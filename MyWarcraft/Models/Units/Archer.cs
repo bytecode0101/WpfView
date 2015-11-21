@@ -9,6 +9,9 @@ namespace MyWarcraft.Models.Units
             Name = "Archer";
             State = State.UNDER_CONSTRUCTION;
             builder = new DoubleTimeBuilder();
+            AttackPower = 4;
+            Range = 5;
+            Life = 30;
         }
     }
 }
