@@ -9,6 +9,9 @@ namespace MyWarcraft.Models.Units
             Name = "Swordman";
             State = State.UNDER_CONSTRUCTION;
             builder = new SimpleBuilder();
+            AttackPower = 7;
+            Range = 2;
+            Life = 40;
         }
     }
 }

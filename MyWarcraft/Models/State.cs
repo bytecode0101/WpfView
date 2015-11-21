@@ -3,6 +3,7 @@
     public enum State
     {
         UNDER_CONSTRUCTION,
-        READY
+        READY,
+        UNDER_ATTACK
     }
 }
