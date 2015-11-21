@@ -4,16 +4,12 @@ using System.ComponentModel;
 
 namespace MyWarcraft.ViewModels
 {
-    public class Position: BindableBase, INotifyPropertyChanged
+    public class Position: BindableBase
     {
         private int x;
         private int y;
 
-        public event PropertyChangingEventHandler PositionChanged;
-
-        public int X { get; set; }
-        
-        public string propertyName
+        public int X
         {
             get
             {
@@ -46,17 +42,5 @@ namespace MyWarcraft.ViewModels
             this.x = X;
             this.y = Y;
         }
-
-        
-
-        public void OnPropertyChanged(int propertyName)
-        {
-            PropertyChangingEventHandler handle = PositionChanged;
-            if (PositionChanged!=null)
-            {
-                handle(this, new PropertyChangedEventArgs());
-            }
-        }
-
     }
 }

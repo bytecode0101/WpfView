@@ -11,7 +11,7 @@ namespace MyWarcraft.Models.Movers
 {
     public abstract class AbstractMovement
     {
-        public Position endPosition { get; set; }
+        public Position EndPosition { get; set; }
 
         public event SecondsElapsed SecondsElapsed;
 
@@ -67,15 +67,17 @@ namespace MyWarcraft.Models.Movers
         /// <param name="y"></param>
         public Position Move(int x, int y)
         {
-            endPosition.X = x;
-            endPosition.X = y;
-            return endPosition;
+            EndPosition.X = x;
+            EndPosition.X = y;
+            return EndPosition;
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             timer.Stop();
             secondsElapsed += SecondsForStep;
+            //TODO: Change the current position one step closer
+            // we don't need SecondsForMovement, insted we need SecondsForStep and the step, that can be 1 on Ox or 1 on Oy or 1 on both
             if (SecondsElapsed != null)
             {
                 SecondsElapsed.Invoke(this, new SecondsElapsedEventArgs());
