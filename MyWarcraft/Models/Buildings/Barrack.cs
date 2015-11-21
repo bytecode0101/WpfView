@@ -15,6 +15,7 @@ namespace MyWarcraft.Models.Buildings
             UnitsCapabilities.Add(new BuildSwordmanCapability());
             Name = "Barrack";
             State = State.UNDER_CONSTRUCTION;
+            Health = Health.HEALTHY;
             builder = new DoubleTimeBuilder();
         }
     }

@@ -8,6 +8,7 @@ namespace MyWarcraft.Models.Units
         {
             Name = "Archer";
             State = State.UNDER_CONSTRUCTION;
+            Health = Health.HEALTHY;
             builder = new DoubleTimeBuilder();
         }
     }

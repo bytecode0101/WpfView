@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyWarcraft.Views"
              mc:Ignorable="d" 
-              Width="120" Height="60" Background="#FFF7C416">
+              Width="120" Height="80" Background="#FFF7C416">
     <Grid>
         <Grid.InputBindings>
             <MouseBinding MouseAction="LeftClick" Command="{Binding DataContext.Click,
@@ -17,6 +17,7 @@
             <RowDefinition Height="20*"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
 
         <TextBlock Text="{Binding Component.Name}" Grid.Row="0"/>
@@ -24,6 +25,9 @@
         <StackPanel  Grid.Row="2" Orientation="Horizontal">
             <TextBlock Text="{Binding Component.PercentageBuilt}"/>
             <TextBlock Text="%"/>
+        </StackPanel>
+        <StackPanel  Grid.Row="3" Orientation="Horizontal">
+            <TextBlock Text="{Binding Component.Health}"/>
         </StackPanel>
     </Grid>
 </UserControl>
