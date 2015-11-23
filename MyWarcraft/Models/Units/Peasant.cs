@@ -14,6 +14,9 @@ namespace MyWarcraft.Models.Units
             Name = "Peasant";
             State = State.UNDER_CONSTRUCTION;
             builder = new SimpleBuilder();
+            AttackPower = 1;
+            Range = 2;
+            Life = 20;
         }
     }
 }
