@@ -5,6 +5,7 @@ using MyWarcraft.Models.Events;
 using MyWarcraft.Models.Units;
 using NLog;
 using System.Collections.ObjectModel;
+using System;
 
 namespace MyWarcraft.Models
 {
@@ -14,7 +15,7 @@ namespace MyWarcraft.Models
 
         public ObservableCollection<AbstractBuildingCapability> BuildingsCapabilities { get; set; }
         public ObservableCollection<AbstractBuildingCapability> UnitsCapabilities { get; set; }
-        public Point Position { get; set; }
+        //public Point Position { get; set; }
         public string Name { get; set; }
         public int Life { get; set; }
 
@@ -46,10 +47,25 @@ namespace MyWarcraft.Models
             }
         }
 
+        public Position Position
+        {
+            get
+            {
+                return position;
+            }
+
+            set
+            {
+                position = value;
+                OnPropertyChanged("Position");
+            }
+        }
+
         protected AbstractBuilder builder;
 
         protected Logger Log;
 
+        private Position position;
         private int percentageBuilt;
         private State state;
 
@@ -57,7 +73,8 @@ namespace MyWarcraft.Models
         public AbstractBuildable()
         {
             Log = LogManager.GetLogger(GetType().FullName);
-        } 
+            Position = new Position();
+        }
         #endregion
 
         public virtual void TakeHit(AbstractUnit attacker, int power)
@@ -72,6 +89,12 @@ namespace MyWarcraft.Models
             {
                 OnBuildComplete();
             }
+        }
+
+        internal virtual void Move(int x, int y)
+        {
+            Position.X = x;
+            Position.Y = y;
         }
 
         protected void OnBuildComplete()

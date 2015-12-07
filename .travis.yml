@@ -1,0 +1,8 @@
+language: csharp
+solution: MyWarcraft.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore MyWarcraft.sln
+after_script:
+  - nunit-console TestTheGame/bin/Release/TestTheGame.dll
