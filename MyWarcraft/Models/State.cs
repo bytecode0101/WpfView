@@ -4,6 +4,7 @@
     {
         UNDER_CONSTRUCTION,
         READY,
+        MOVING,
         UNDER_ATTACK
     }
 }

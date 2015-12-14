@@ -74,7 +74,7 @@ namespace MyWarcraft.Models
         {
             Log = LogManager.GetLogger(GetType().FullName);
             Position = new Position();
-        }
+        } 
         #endregion
 
         public virtual void TakeHit(AbstractUnit attacker, int power)
@@ -91,7 +91,7 @@ namespace MyWarcraft.Models
             }
         }
 
-        internal void Move(int x, int y)
+        internal virtual void Move(int x, int y)
         {
             Position.X = x;
             Position.Y = y;
