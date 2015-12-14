@@ -15,7 +15,6 @@ namespace MyWarcraft.Models
 
         public ObservableCollection<AbstractBuildingCapability> BuildingsCapabilities { get; set; }
         public ObservableCollection<AbstractBuildingCapability> UnitsCapabilities { get; set; }
-        public Point Position { get; set; }
         public string Name { get; set; }
         public int Life { get; set; }
 
