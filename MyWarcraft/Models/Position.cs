@@ -1,13 +1,19 @@
 ﻿using Microsoft.Practices.Prism.Mvvm;
+using System;
+using System.ComponentModel;
 
 namespace MyWarcraft.Models
 {
-    public class Position: BindableBase
+    public class Position: BindableBase, INotifyPropertyChanged
     {
         private int x;
         private int y;
 
-        public int X
+        public event PropertyChangingEventHandler PositionChanged;
+
+        public int X { get; set; }
+        
+        public string propertyName
         {
             get
             {
@@ -34,5 +40,23 @@ namespace MyWarcraft.Models
                 OnPropertyChanged("Y");
             }
         }
+
+        public Position(int X, int Y)
+        {
+            this.x = X;
+            this.y = Y;
+        }
+
+        
+
+        public void OnPropertyChanged(int propertyName)
+        {
+            PropertyChangingEventHandler handle = PositionChanged;
+            if (PositionChanged!=null)
+            {
+                handle(this, new PropertyChangedEventArgs());
+            }
+        }
+
     }
 }
