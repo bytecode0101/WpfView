@@ -104,18 +104,6 @@
     <Compile Include="ViewModels\ComponentViewModel.cs" />
     <Compile Include="ViewModels\PlayerBaseViewModel.cs" />
     <Compile Include="Models\Position.cs" />
-    <Compile Include="Views\BoardView.xaml.cs">
-      <DependentUpon>BoardView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CapabilityView.xaml.cs">
-      <DependentUpon>CapabilityView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ComponentView.xaml.cs">
-      <DependentUpon>ComponentView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PlayerBaseView.xaml.cs">
-      <DependentUpon>PlayerBaseView.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -128,22 +116,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\BoardView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\CapabilityView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ComponentView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\PlayerBaseView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

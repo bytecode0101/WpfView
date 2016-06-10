@@ -68,12 +68,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyWarcraft\MyWarcraft.csproj">
-      <Project>{74be4ce7-2f73-4789-9e9e-6dc47f60bb90}</Project>
-      <Name>MyWarcraft</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
