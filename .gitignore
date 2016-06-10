@@ -210,3 +210,6 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/TilePathGame/Library
+/TilePathGame/Temp/__Backupscenes
+/TilePathGame/Temp/UnityLockfile
