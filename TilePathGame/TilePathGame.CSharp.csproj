@@ -107,9 +107,12 @@
     <Compile Include="Assets\MicroWarcraft\Models\State.cs" />
     <Compile Include="Assets\MicroWarcraft\Models\Units\AbstractUnit.cs" />
     <Compile Include="Assets\MicroWarcraft\Models\Units\Archer.cs" />
+    <Compile Include="Assets\MicroWarcraft\Models\Units\CommandExecutor.cs" />
+    <Compile Include="Assets\MicroWarcraft\Models\Units\ICommandExecutor.cs" />
     <Compile Include="Assets\MicroWarcraft\Models\Units\Peasant.cs" />
     <Compile Include="Assets\MicroWarcraft\Models\Units\Swordman.cs" />
     <Compile Include="Assets\MicroWarcraft\Utils\BindableBase.cs" />
+    <Compile Include="Assets\MicroWarcraft\Utils\Command.cs" />
     <Compile Include="Assets\MicroWarcraft\Utils\DelegateCommand.cs" />
     <Compile Include="Assets\MicroWarcraft\Utils\ICommand.cs" />
     <Compile Include="Assets\MicroWarcraft\Utils\NotifyCollectionChangedEventArgs.cs" />

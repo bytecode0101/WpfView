@@ -15,5 +15,12 @@ namespace Assets.MicroWarcraft.Models.Units
             State = State.UNDER_CONSTRUCTION;
             builder = new SimpleBuilder();
         }
+
+        public void Build(AbstractBuildable buildable)
+        {
+            PutCommand(() => {
+                RealBuidBuilding(param1);
+            });
+        }
     }
 }
