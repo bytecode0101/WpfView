@@ -6,5 +6,9 @@ namespace Assets.MicroWarcraft.Utils
     public class NotifyCollectionChangedEventArgs
     {
         public IEnumerable<object> NewItems { get; internal set; }
+        public NotifyCollectionChangedEventArgs(IEnumerable<object> newItems)
+        {
+            NewItems = newItems;
+        }
     }
 }

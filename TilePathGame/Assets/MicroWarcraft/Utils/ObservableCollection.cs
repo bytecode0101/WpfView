@@ -2,12 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using Assets.MicroWarcraft.Models.Capabilities;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace Assets.MicroWarcraft.Utils
 {
-    public class ObservableCollection<T>: IEnumerable<T>
+    public delegate void CollectionChangedEventHandler(object sender, NotifyCollectionChangedEventArgs arg);
+    public class ObservableCollection<T> : Collection<T>, IEnumerable<T>, INotifyPropertyChanged
     {
-        public Action<object, NotifyCollectionChangedEventArgs> CollectionChanged { get; internal set; }
+        public event CollectionChangedEventHandler CollectionChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private List<T> items;
 
         public object Current
         {
@@ -17,19 +23,17 @@ namespace Assets.MicroWarcraft.Utils
             }
         }
 
-        internal void Add(T element)
-        {
-            throw new NotImplementedException();
-        }
 
-        public IEnumerator<T> GetEnumerator()
+        public new void Add(T element)
         {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
+            base.Add(element);
+            if (CollectionChanged!=null)
+            {
+               var addedItems = new List<object>();
+                addedItems.Add(element);
+                var arg = new NotifyCollectionChangedEventArgs(addedItems);
+                CollectionChanged(this, arg);
+            }
         }
     }
 }

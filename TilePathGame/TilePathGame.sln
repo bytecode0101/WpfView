@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilePathGame.CSharp", "TilePathGame.CSharp.csproj", "{C75C9F8C-82E0-A8E3-F061-040D52B80AC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroWarcraft", "..\MicroWarcraft\MicroWarcraft.csproj", "{9E22C342-4344-47B8-B47A-BE3488DBA3D2}"
