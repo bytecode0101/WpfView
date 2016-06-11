@@ -107,8 +107,8 @@
     <Compile Include="Assets\MicroWarcraft\Models\State.cs" />
     <Compile Include="Assets\MicroWarcraft\Models\Units\AbstractUnit.cs" />
     <Compile Include="Assets\MicroWarcraft\Models\Units\Archer.cs" />
-    <Compile Include="Assets\MicroWarcraft\Models\Units\CommandExecutor.cs" />
-    <Compile Include="Assets\MicroWarcraft\Models\Units\ICommandExecutor.cs" />
+    <Compile Include="Assets\MicroWarcraft\Utils\CommandExecutor.cs" />
+    <Compile Include="Assets\MicroWarcraft\Utils\ICommandExecutor.cs" />
     <Compile Include="Assets\MicroWarcraft\Models\Units\Peasant.cs" />
     <Compile Include="Assets\MicroWarcraft\Models\Units\Swordman.cs" />
     <Compile Include="Assets\MicroWarcraft\Utils\BindableBase.cs" />

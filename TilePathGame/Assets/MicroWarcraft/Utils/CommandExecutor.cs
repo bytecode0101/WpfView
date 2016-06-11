@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Assets.MicroWarcraft.Models.Units
+namespace Assets.MicroWarcraft.Utils
 {
     public class CommandExecutor : ICommandExecutor
     {
