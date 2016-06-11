@@ -39,17 +39,16 @@ namespace MyWarcraft.ViewModels
                 componentVM.ComponentSelected += ComponentVM_ComponentSelected;
                 ComponentVMs.Add(componentVM);
             }
-            Click = new DelegateCommand<IInputElement>(OnBoadLeftClick);
         }
 
-        private void OnBoadLeftClick(IInputElement parameter)
-        {
-            if (SelectedComponent!=null)
-            {
-                var point = Mouse.GetPosition(parameter); 
-                SelectedComponent.Move((int)point.X, (int)point.Y);
-            }
-        }
+        //private void OnBoadLeftClick(IInputElement parameter)
+        //{
+        //    if (SelectedComponent!=null)
+        //    {
+        //        var point = Mouse.GetPosition(parameter); 
+        //        SelectedComponent.Move((int)point.X, (int)point.Y);
+        //    }
+        //}
 
         private void ComponentVM_ComponentSelected(object sender, ComponentSelectedEventArgs e)
         {
